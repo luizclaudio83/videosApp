@@ -11,10 +11,12 @@
   <ion-searchbar placeholder="Buscar"> </ion-searchbar>
 
   <ion-list>
-    <ion-item lines="full"> 
+    <ion-item-sliding>
+      <ion-item lines="full">
       <ion-thumbnail slot="start">
         <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w8BVC3qrCWCiTHRz4Rft12dtQF0.jpg">
       </ion-thumbnail>
+
       <ion-label class="ion-text-wrap">
           <div>
             <h1>Mortal Kombat (2021)</h1>
@@ -25,8 +27,39 @@
       <ion-chip color="success" outline>
         <ion-label>76%</ion-label>
       </ion-chip>
-      
     </ion-item>
-  </ion-list>
 
+    <ion-item-options side="end">
+      <ion-item-option >
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+    </ion-item-sliding>
+
+
+    <ion-item-sliding>
+      <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zduyzcjyahZtP4fGZE6789h04IM.jpg">
+      </ion-thumbnail>
+
+      <ion-label class="ion-text-wrap">
+          <div>
+            <h1>Rogai Por Nós (2021)</h1>
+            <p>02/04/2021 (US) - 1h 39m</p>
+            <p>Terror</p>
+          </div>
+      </ion-label>
+      <ion-chip color="success" outline>
+        <ion-label>76%</ion-label>
+      </ion-chip>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option >
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

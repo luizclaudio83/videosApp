@@ -40,7 +40,7 @@ export class Tab1Page {
     const toast = await this.toastController.create({
       message: 'Filmes adicionados ao Favoritos',
       duration: 2000,
-      color: 'success'
+      color: 'warning'
     });
     toast.present();
   }

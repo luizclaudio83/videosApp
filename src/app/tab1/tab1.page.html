@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="tertiary">
     <ion-title>
-      Videos App
+      {{titulo}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,21 +11,21 @@
   <ion-searchbar placeholder="Buscar"> </ion-searchbar>
 
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let filme of listaVideos">
       <ion-item lines="full">
       <ion-thumbnail slot="start">
-        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w8BVC3qrCWCiTHRz4Rft12dtQF0.jpg">
+        <img [src]="filme.cartaz">
       </ion-thumbnail>
 
       <ion-label class="ion-text-wrap">
           <div>
-            <h1>Mortal Kombat (2021)</h1>
-            <p>15/04/2021 (BR)- 1h 50m</p>
-            <p>Ação, Fantasia, Aventura</p>
+            <h1>{{filme.nome}}</h1>
+            <p>{{filme.lancamento}} - {{filme.duracao}}</p>
+            <ion-badge color="light" *ngFor="let genero of filme.generos">{{generos}} </ion-badge>
           </div>
       </ion-label>
       <ion-chip color="tertiary" outline>
-        <ion-label>56%</ion-label>
+        <ion-label>{{filme.classificacao}}</ion-label>
       </ion-chip>
     </ion-item>
 
@@ -37,55 +37,6 @@
     </ion-item-sliding>
 
 
-    <ion-item-sliding>
-      <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zduyzcjyahZtP4fGZE6789h04IM.jpg">
-      </ion-thumbnail>
-
-      <ion-label class="ion-text-wrap">
-          <div>
-            <h1>Rogai Por Nós (2021)</h1>
-            <p>02/04/2021 (US) - 1h 39m</p>
-            <p>Terror</p>
-          </div>
-      </ion-label>
-      <ion-chip color="tertiary" outline>
-        <ion-label>76%</ion-label>
-      </ion-chip>
-    </ion-item>
-
-    <ion-item-options side="end">
-      <ion-item-option color="azul" (click)="exibirAlertaFavorito()">
-        <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-item-option>
-    </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wAJniojhHa4oVKa9AxdNwvpmS74.jpg">
-      </ion-thumbnail>
-
-      <ion-label class="ion-text-wrap">
-          <div>
-            <h1>Na Mira do Perigo (2021)</h1>
-            <p>18/02/2021 (BR)- 1h 48m</p>
-            <p>Ação, Thriller, Crime</p>
-          </div>
-      </ion-label>
-      <ion-chip color="tertiary" outline>
-        <ion-label>74%</ion-label>
-      </ion-chip>
-    </ion-item>
-
-    <ion-item-options side="end">
-       <ion-item-option color="laranja" (click)="exibirAlertaFavorito()">
-        <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-item-option>
-    </ion-item-options>
-    </ion-item-sliding>
 
   </ion-list>
 </ion-content>

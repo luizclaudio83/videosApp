@@ -1,7 +1,9 @@
+import { DadosService } from './../services/dados.service';
 import { IFilme } from '../models/ifilme.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +22,8 @@ export class Tab1Page {
        duracao: '1h 50m',
        classificacao: 56,
        cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w8BVC3qrCWCiTHRz4Rft12dtQF0.jpg',
-       generos: ['Ação', 'Fantasia', 'Aventura']
+       generos: ['Ação', 'Fantasia', 'Aventura'],
+       pagina: '/mortal-kombat'
     },
     {
        nome: 'Rogai Por Nós (2021)',
@@ -28,7 +31,8 @@ export class Tab1Page {
        duracao: '1h 39m',
        classificacao: 76,
        cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zduyzcjyahZtP4fGZE6789h04IM.jpg',
-       generos: ['Terror']
+       generos: ['Terror'],
+       pagina: '/rogai-por-nos'
     },
     {
       nome: 'Na Mira do Perigo (2021)',
@@ -36,14 +40,24 @@ export class Tab1Page {
       duracao: '1h 48m',
       classificacao: 74,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wAJniojhHa4oVKa9AxdNwvpmS74.jpg',
-      generos: ['Ação', 'Thriller', 'Crime']
+      generos: ['Ação', 'Thriller', 'Crime'],
+      pagina: '/na-mira-do-perigo'
    },
 
   ];
 
 
 
-  constructor(public alertController: AlertController, public toastController: ToastController) {}
+  constructor(
+    public alertController: AlertController,
+    public toastController: ToastController,
+    public dadosService: DadosService,
+    public route: Router ) { }
+
+    exibirFilme(filme: IFilme){
+      this.dadosService.guardarDados('filme',filme);
+      this.route.navigateByUrl('/dados-filme');
+    }
 
   async exibirAlertaFavorito() {
     const alert = await this.alertController.create({

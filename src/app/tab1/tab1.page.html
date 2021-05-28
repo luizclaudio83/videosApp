@@ -12,7 +12,7 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let filme of listaVideos">
-      <ion-item lines="full">
+      <ion-item lines="full" (click)="exibirFilme(filme)">
       <ion-thumbnail slot="start">
         <img [src]="filme.cartaz">
       </ion-thumbnail>
@@ -21,7 +21,7 @@
           <div>
             <h1>{{filme.nome}}</h1>
             <p>{{filme.lancamento}} - {{filme.duracao}}</p>
-            <ion-badge color="light" *ngFor="let genero of filme.generos">{{generos}} </ion-badge>
+            <ion-badge color="light" *ngFor="let genero of filme.generos"> {{genero}} </ion-badge>
           </div>
       </ion-label>
       <ion-chip color="tertiary" outline>

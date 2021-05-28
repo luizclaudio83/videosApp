@@ -21,6 +21,14 @@ const routes: Routes = [
   {
     path: 'dados-filme',
     loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
+  },
+  {
+    path: 'liga-da-justica',
+    loadChildren: () => import('./filmes/liga-da-justica/liga-da-justica.module').then( m => m.LigaDaJusticaPageModule)
+  },
+  {
+    path: 'godzilla',
+    loadChildren: () => import('./filmes/godzilla/godzilla.module').then( m => m.GodzillaPageModule)
   }
 ];
 @NgModule({

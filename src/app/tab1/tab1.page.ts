@@ -43,6 +43,24 @@ export class Tab1Page {
       generos: ['Ação', 'Thriller', 'Crime'],
       pagina: '/na-mira-do-perigo'
    },
+   {
+      nome: 'Liga da Justiça de Zack Snyder (2021)',
+      lancamento: '18/03/2021',
+      duracao: '4h 2m',
+      classificacao: 85,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ArWn6gCi61b3b3hclD2L0LOk66k.jpg',
+      generos: ['Ação', 'Aventura', 'Fantasia', 'Ficção científica'],
+      pagina: '/liga-da-justica'
+   },
+   {
+      nome: 'Godzilla vs. Kong (2021)',
+      lancamento: '01/04/2021',
+      duracao: '1h 53m',
+      classificacao: 81,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wllzjZxg4ynlAm5xmOICJ2uHOPJ.jpg',
+      generos: ['Ação','Ficção científica'],
+      pagina: '/godzilla'
+   },
 
   ];
 

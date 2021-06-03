@@ -18,7 +18,7 @@ export class GeneroService {
 
   buscarGeneros(): Observable<IListaGenero>{
 
-    const url =`${this.apiURL}genre/movie/list${this.key}&language=${this.lingua}&region=${this.regiao}&query=${busca}`;
+    const url =`${this.apiURL}genre/movie/list${this.key}&language=${this.lingua}`;
 
     return this.http.get<IListaGenero>(url).pipe(
 

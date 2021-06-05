@@ -22,6 +22,30 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'lucifer',
+    loadChildren: () => import('./series/lucifer/lucifer.module').then( m => m.LuciferPageModule)
+  },
+  {
+    path: 'theflash',
+    loadChildren: () => import('./series/theflash/theflash.module').then( m => m.TheflashPageModule)
+  },
+  {
+    path: 'thegooddoctor',
+    loadChildren: () => import('./series/thegooddoctor/thegooddoctor.module').then( m => m.ThegooddoctorPageModule)
+  },
+  {
+    path: 'superman',
+    loadChildren: () => import('./series/superman/superman.module').then( m => m.SupermanPageModule)
+  },
+  {
+    path: 'invencivel',
+    loadChildren: () => import('./series/invencivel/invencivel.module').then( m => m.InvencivelPageModule)
+  },
+  {
+    path: 'dados-serie',
+    loadChildren: () => import('./dados-serie/dados-serie.module').then( m => m.DadosSeriePageModule)
   }
 ];
 @NgModule({
